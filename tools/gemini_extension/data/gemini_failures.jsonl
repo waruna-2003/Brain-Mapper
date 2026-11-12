@@ -1,2 +1,84 @@
 {"question_id": 1, "error": "Timeout: No stable assistant response received from Gemini after 120s", "attempt": 1, "failed_at": "2026-11-10T06:52:46.348969+00:00"}
 {"question_id": 7, "error": "Timeout: No stable assistant response received from Gemini after 120s", "attempt": 1, "failed_at": "2026-11-10T06:57:35.314409+00:00"}
+{"question_id": 58, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T12:36:30.588427+00:00"}
+{"question_id": 58, "error": "Invalid JSON returned: Expected double-quoted property name in JSON at position 170 (line 9 column 19). Raw snippet: {\n\"question_id\": 58,\n\"attention\": 3,\n\"working_memory\": 3,\n\"logical_reasoning\": 3,\n\"language_processi", "attempt": 2, "failed_at": "2026-11-12T12:37:24.743287+00:00"}
+{"question_id": 59, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T12:48:06.826550+00:00"}
+{"question_id": 59, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T12:55:25.301598+00:00"}
+{"question_id": 63, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T13:16:06.735353+00:00"}
+{"question_id": 63, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T13:22:06.770795+00:00"}
+{"question_id": 63, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T13:27:06.808056+00:00"}
+{"question_id": 64, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T13:36:15.324130+00:00"}
+{"question_id": 73, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T13:37:52.803664+00:00"}
+{"question_id": 74, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T13:38:37.506162+00:00"}
+{"question_id": 75, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T13:39:15.716363+00:00"}
+{"question_id": 98, "error": "Invalid JSON returned: Unexpected end of JSON input. Raw snippet: {\n\"question_id\": 98,\n\"attention\": 1,\n\"working_memory\": 2,\n\"logical_reasoning\": 2,\n\"language_processi", "attempt": 1, "failed_at": "2026-11-12T13:48:57.733546+00:00"}
+{"question_id": 110, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T13:59:53.772533+00:00"}
+{"question_id": 136, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:09:51.144608+00:00"}
+{"question_id": 138, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:11:06.871610+00:00"}
+{"question_id": 154, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:20:06.092844+00:00"}
+{"question_id": 154, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:25:14.975874+00:00"}
+{"question_id": 154, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:25:15.002964+00:00"}
+{"question_id": 165, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:26:16.318519+00:00"}
+{"question_id": 169, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:27:09.832154+00:00"}
+{"question_id": 173, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:28:41.627365+00:00"}
+{"question_id": 173, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:28:42.327695+00:00"}
+{"question_id": 175, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:30:20.065570+00:00"}
+{"question_id": 175, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:30:20.767114+00:00"}
+{"question_id": 179, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:31:15.945280+00:00"}
+{"question_id": 179, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:31:23.014028+00:00"}
+{"question_id": 179, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:31:23.815715+00:00"}
+{"question_id": 180, "error": "Stale output detected: response specifies question_id #179, but currently expecting #180", "attempt": 1, "failed_at": "2026-11-12T14:31:29.083452+00:00"}
+{"question_id": 181, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:32:06.569486+00:00"}
+{"question_id": 182, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:32:38.943132+00:00"}
+{"question_id": 182, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 2, "failed_at": "2026-11-12T14:32:38.943957+00:00"}
+{"question_id": 183, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:33:02.278280+00:00"}
+{"question_id": 183, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:33:02.282281+00:00"}
+{"question_id": 183, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:33:03.679211+00:00"}
+{"question_id": 184, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:33:19.053187+00:00"}
+{"question_id": 184, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 2, "failed_at": "2026-11-12T14:33:19.250793+00:00"}
+{"question_id": 184, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 3, "failed_at": "2026-11-12T14:33:19.415576+00:00"}
+{"question_id": 185, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:33:33.531490+00:00"}
+{"question_id": 186, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:34:08.653346+00:00"}
+{"question_id": 187, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:40:02.870097+00:00"}
+{"question_id": 193, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:42:00.214822+00:00"}
+{"question_id": 193, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:42:00.926910+00:00"}
+{"question_id": 193, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 3, "failed_at": "2026-11-12T14:42:19.308815+00:00"}
+{"question_id": 197, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:44:02.864314+00:00"}
+{"question_id": 199, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:44:45.223489+00:00"}
+{"question_id": 199, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:45:00.683299+00:00"}
+{"question_id": 209, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:47:10.587943+00:00"}
+{"question_id": 209, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:47:10.589371+00:00"}
+{"question_id": 209, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:47:10.591774+00:00"}
+{"question_id": 210, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:47:26.147217+00:00"}
+{"question_id": 210, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 2, "failed_at": "2026-11-12T14:47:26.393593+00:00"}
+{"question_id": 210, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:47:26.827205+00:00"}
+{"question_id": 212, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:47:41.810171+00:00"}
+{"question_id": 212, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:47:45.166439+00:00"}
+{"question_id": 214, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:49:51.789905+00:00"}
+{"question_id": 214, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:49:52.489128+00:00"}
+{"question_id": 214, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:50:07.268199+00:00"}
+{"question_id": 214, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 4, "failed_at": "2026-11-12T14:50:07.947311+00:00"}
+{"question_id": 215, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:50:23.438835+00:00"}
+{"question_id": 215, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:50:29.794518+00:00"}
+{"question_id": 218, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:51:47.706672+00:00"}
+{"question_id": 218, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:51:48.401890+00:00"}
+{"question_id": 221, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:52:35.351445+00:00"}
+{"question_id": 221, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:52:35.351891+00:00"}
+{"question_id": 221, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:52:48.508805+00:00"}
+{"question_id": 221, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 4, "failed_at": "2026-11-12T14:52:49.207724+00:00"}
+{"question_id": 223, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:53:04.966039+00:00"}
+{"question_id": 223, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:53:14.967849+00:00"}
+{"question_id": 224, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 1, "failed_at": "2026-11-12T14:53:53.663350+00:00"}
+{"question_id": 224, "error": "Could not send prompt to Gemini. Check if input box or Send button is active.", "attempt": 2, "failed_at": "2026-11-12T14:53:54.006014+00:00"}
+{"question_id": 225, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:54:29.303009+00:00"}
+{"question_id": 225, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:54:30.009178+00:00"}
+{"question_id": 225, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 3, "failed_at": "2026-11-12T14:54:33.526705+00:00"}
+{"question_id": 228, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T14:55:19.925116+00:00"}
+{"question_id": 228, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 2, "failed_at": "2026-11-12T14:55:19.925837+00:00"}
+{"question_id": 283, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T15:15:20.061764+00:00"}
+{"question_id": 292, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T15:20:26.671066+00:00"}
+{"question_id": 305, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T15:27:02.184530+00:00"}
+{"question_id": 369, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T15:49:06.729336+00:00"}
+{"question_id": 381, "error": "Gemini input box not found. Make sure you are on gemini.google.com and logged in.", "attempt": 1, "failed_at": "2026-11-12T15:53:12.589491+00:00"}
+{"question_id": 501, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T16:22:06.726692+00:00"}
+{"question_id": 504, "error": "Timeout: No stable assistant response received from Gemini after 150s", "attempt": 1, "failed_at": "2026-11-12T16:37:06.742101+00:00"}
