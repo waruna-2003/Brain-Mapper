@@ -1,0 +1,43 @@
+[
+  {
+    "model": "dkt",
+    "split_mode": "standard",
+    "data_counts": {
+      "annotated_only": true,
+      "annotated_questions": 7652,
+      "active_skills": [
+        "attention",
+        "working_memory",
+        "logical_reasoning",
+        "language_processing",
+        "critical_thinking",
+        "metacognition"
+      ],
+      "use_concepts": true,
+      "use_rasch": false,
+      "attention_window": null,
+      "concept_clusters": null,
+      "cache_students": 18066,
+      "cache_interactions": 5549184,
+      "train_windows": 6418,
+      "val_windows": 6186,
+      "test_windows": 7750
+    },
+    "best_val": {
+      "auc": 0.7735141188466803,
+      "accuracy": 0.814556921265723,
+      "rmse": 0.3665601586121517,
+      "count": 885091,
+      "loss": 0.423823158936704
+    },
+    "test": {
+      "auc": 0.7743285011166432,
+      "accuracy": 0.8151491878297287,
+      "rmse": 0.3658610361028881,
+      "count": 1095029,
+      "loss": 0.42232460931158045
+    },
+    "epochs_trained": 8,
+    "checkpoint": "artifacts\\complete_dataset\\dkt\\dkt_standard_best.pt"
+  }
+]

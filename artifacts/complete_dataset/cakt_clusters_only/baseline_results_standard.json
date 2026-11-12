@@ -1,0 +1,51 @@
+[
+  {
+    "model": "cakt",
+    "split_mode": "standard",
+    "data_counts": {
+      "annotated_only": true,
+      "annotated_questions": 7652,
+      "active_skills": [
+        "attention",
+        "working_memory",
+        "logical_reasoning",
+        "language_processing",
+        "critical_thinking",
+        "metacognition"
+      ],
+      "use_concepts": true,
+      "use_rasch": false,
+      "attention_window": null,
+      "concept_clusters": {
+        "original_num_concepts": 865,
+        "covered_concepts": 865,
+        "num_clusters": 64,
+        "min_cluster_size": 1,
+        "median_cluster_size": 11.5,
+        "max_cluster_size": 37,
+        "silhouette_score": 0.2991
+      },
+      "cache_students": 18066,
+      "cache_interactions": 5549184,
+      "train_windows": 6418,
+      "val_windows": 6186,
+      "test_windows": 7750
+    },
+    "best_val": {
+      "auc": 0.8103040802977907,
+      "accuracy": 0.8246248125898918,
+      "rmse": 0.35458513295373956,
+      "count": 885091,
+      "loss": 0.39756534198942717
+    },
+    "test": {
+      "auc": 0.8116576304288252,
+      "accuracy": 0.8247279295799472,
+      "rmse": 0.353888741802932,
+      "count": 1095029,
+      "loss": 0.39589357620046634
+    },
+    "epochs_trained": 8,
+    "checkpoint": "artifacts\\complete_dataset\\cakt_clusters_only\\cakt_standard_best.pt"
+  }
+]

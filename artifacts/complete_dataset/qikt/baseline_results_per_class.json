@@ -1,0 +1,172 @@
+[
+  {
+    "model": "qikt",
+    "split_mode": "per_class",
+    "data_counts": {
+      "annotated_only": true,
+      "annotated_questions": 7652,
+      "active_skills": [
+        "attention",
+        "working_memory",
+        "logical_reasoning",
+        "language_processing",
+        "critical_thinking",
+        "metacognition"
+      ],
+      "use_concepts": true,
+      "use_rasch": false,
+      "attention_window": null,
+      "concept_clusters": null,
+      "cache_students": 18066,
+      "cache_interactions": 5549184,
+      "base_students": 2000,
+      "base_train_windows": 3415,
+      "base_val_windows": 2000
+    },
+    "num_classes": 5,
+    "students_per_class": 40,
+    "summary": {
+      "from_scratch_mean_auc": 0.579,
+      "from_scratch_mean_acc": 0.7876,
+      "from_scratch_mean_rmse": 0.4084,
+      "base_mean_auc": 0.7594,
+      "base_mean_acc": 0.8042,
+      "base_mean_rmse": 0.3775,
+      "customized_mean_auc": 0.7572,
+      "customized_mean_acc": 0.8041,
+      "customized_mean_rmse": 0.3769
+    },
+    "classes": [
+      {
+        "class_id": 1,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.5853604561395995,
+          "accuracy": 0.8013698630136986,
+          "rmse": 0.3982625962974371,
+          "count": 2482,
+          "loss": 0.500361985767877
+        },
+        "base_uncustomized_test": {
+          "auc": 0.7764586564849063,
+          "accuracy": 0.8182917002417406,
+          "rmse": 0.36618710089448375,
+          "count": 2482,
+          "loss": 0.43008895478932535
+        },
+        "class_customized_test": {
+          "auc": 0.7749009001842793,
+          "accuracy": 0.8203062046736502,
+          "rmse": 0.36513248746858534,
+          "count": 2482,
+          "loss": 0.4234983928975898
+        },
+        "checkpoint": "artifacts\\complete_dataset\\qikt\\qikt_class_1.pt"
+      },
+      {
+        "class_id": 2,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.5793955694654995,
+          "accuracy": 0.771689497716895,
+          "rmse": 0.4188327556711816,
+          "count": 2409,
+          "loss": 0.5401270183699415
+        },
+        "base_uncustomized_test": {
+          "auc": 0.7759078683554208,
+          "accuracy": 0.8073889580738896,
+          "rmse": 0.3781623421514254,
+          "count": 2409,
+          "loss": 0.4557002285250295
+        },
+        "class_customized_test": {
+          "auc": 0.7759078683554208,
+          "accuracy": 0.8073889580738896,
+          "rmse": 0.3781623421514254,
+          "count": 2409,
+          "loss": 0.4557002285250295
+        },
+        "checkpoint": "artifacts\\complete_dataset\\qikt\\qikt_class_2.pt"
+      },
+      {
+        "class_id": 3,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.5452256153992459,
+          "accuracy": 0.7947543713572023,
+          "rmse": 0.4065829419951004,
+          "count": 2402,
+          "loss": 0.5165874338666168
+        },
+        "base_uncustomized_test": {
+          "auc": 0.6979748963222145,
+          "accuracy": 0.7860116569525396,
+          "rmse": 0.39333409513223266,
+          "count": 2402,
+          "loss": 0.4916925124830251
+        },
+        "class_customized_test": {
+          "auc": 0.6954896045952927,
+          "accuracy": 0.7868442964196503,
+          "rmse": 0.39162507245784783,
+          "count": 2402,
+          "loss": 0.48213003492672973
+        },
+        "checkpoint": "artifacts\\complete_dataset\\qikt\\qikt_class_3.pt"
+      },
+      {
+        "class_id": 4,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.5694160212939555,
+          "accuracy": 0.7787251319529029,
+          "rmse": 0.4175204180669616,
+          "count": 2463,
+          "loss": 0.5389770101445794
+        },
+        "base_uncustomized_test": {
+          "auc": 0.7509066746155948,
+          "accuracy": 0.7876573284612262,
+          "rmse": 0.3871364690718602,
+          "count": 2463,
+          "loss": 0.46978887953121296
+        },
+        "class_customized_test": {
+          "auc": 0.7484145136727296,
+          "accuracy": 0.7868453105968332,
+          "rmse": 0.38647121489030495,
+          "count": 2463,
+          "loss": 0.466161658112421
+        },
+        "checkpoint": "artifacts\\complete_dataset\\qikt\\qikt_class_4.pt"
+      },
+      {
+        "class_id": 5,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.6156535959842532,
+          "accuracy": 0.7915780518928116,
+          "rmse": 0.40089361762493086,
+          "count": 2351,
+          "loss": 0.503579794473214
+        },
+        "base_uncustomized_test": {
+          "auc": 0.795769404603087,
+          "accuracy": 0.8217779668226287,
+          "rmse": 0.36282123704356595,
+          "count": 2351,
+          "loss": 0.4210036755723681
+        },
+        "class_customized_test": {
+          "auc": 0.7914320399478598,
+          "accuracy": 0.8192258613356018,
+          "rmse": 0.36323914239289823,
+          "count": 2351,
+          "loss": 0.4187017534576239
+        },
+        "checkpoint": "artifacts\\complete_dataset\\qikt\\qikt_class_5.pt"
+      }
+    ]
+  }
+]

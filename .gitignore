@@ -36,6 +36,8 @@ htmlcov/
 !/data/processed/
 !/data/processed/xes3g5m/
 !/data/processed/xes3g5m/**
+/data/processed/xes3g5m/kt_cache/**
+*.npz
 /data/interim/**
 /data/annotations/**
 !/data/annotations/
@@ -48,6 +50,7 @@ htmlcov/
 /artifacts/models/**
 /artifacts/metrics/**
 /artifacts/figures/**
+*.pt
 !/artifacts/README.md
 
 # Experiment tracking

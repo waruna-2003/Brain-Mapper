@@ -1,73 +1,73 @@
 {
-  "sample_size": 12,
+  "sample_size": 491,
   "dataset_type": "text_only",
   "evaluated_at": "compare_deepseek_vs_gemini.py",
   "skills": [
     {
       "skill": "attention",
-      "n": 12,
-      "deepseek_mean": 1.75,
-      "gemini_mean": 2.17,
-      "mae": 0.42,
-      "exact_agreement_percent": 66.7,
-      "within_1_percent": 91.7,
-      "pearson_r": 0.509,
-      "weighted_kappa": 0.417
+      "n": 491,
+      "deepseek_mean": 1.61,
+      "gemini_mean": 1.84,
+      "mae": 0.32,
+      "exact_agreement_percent": 69.9,
+      "within_1_percent": 98.2,
+      "pearson_r": 0.444,
+      "weighted_kappa": 0.406
     },
     {
       "skill": "working_memory",
-      "n": 12,
-      "deepseek_mean": 2.08,
-      "gemini_mean": 2.58,
-      "mae": 0.67,
-      "exact_agreement_percent": 50.0,
-      "within_1_percent": 83.3,
-      "pearson_r": 0.278,
-      "weighted_kappa": 0.191
+      "n": 491,
+      "deepseek_mean": 2.23,
+      "gemini_mean": 2.08,
+      "mae": 0.42,
+      "exact_agreement_percent": 60.5,
+      "within_1_percent": 98.2,
+      "pearson_r": 0.565,
+      "weighted_kappa": 0.553
     },
     {
       "skill": "logical_reasoning",
-      "n": 12,
-      "deepseek_mean": 2.08,
-      "gemini_mean": 2.5,
-      "mae": 0.75,
-      "exact_agreement_percent": 58.3,
-      "within_1_percent": 83.3,
-      "pearson_r": 0.163,
-      "weighted_kappa": 0.125
+      "n": 491,
+      "deepseek_mean": 2.29,
+      "gemini_mean": 2.18,
+      "mae": 0.43,
+      "exact_agreement_percent": 62.1,
+      "within_1_percent": 96.5,
+      "pearson_r": 0.529,
+      "weighted_kappa": 0.517
     },
     {
       "skill": "language_processing",
-      "n": 12,
-      "deepseek_mean": 1.58,
-      "gemini_mean": 1.83,
-      "mae": 0.42,
-      "exact_agreement_percent": 58.3,
-      "within_1_percent": 100.0,
-      "pearson_r": 0.408,
-      "weighted_kappa": 0.318
+      "n": 491,
+      "deepseek_mean": 1.46,
+      "gemini_mean": 1.44,
+      "mae": 0.34,
+      "exact_agreement_percent": 67.0,
+      "within_1_percent": 99.2,
+      "pearson_r": 0.526,
+      "weighted_kappa": 0.526
     },
     {
       "skill": "critical_thinking",
-      "n": 12,
-      "deepseek_mean": 1.33,
-      "gemini_mean": 1.83,
-      "mae": 0.83,
-      "exact_agreement_percent": 33.3,
-      "within_1_percent": 83.3,
-      "pearson_r": 0.604,
-      "weighted_kappa": 0.523
+      "n": 491,
+      "deepseek_mean": 0.77,
+      "gemini_mean": 1.12,
+      "mae": 0.84,
+      "exact_agreement_percent": 37.5,
+      "within_1_percent": 80.0,
+      "pearson_r": 0.357,
+      "weighted_kappa": 0.321
     },
     {
       "skill": "metacognition",
-      "n": 12,
-      "deepseek_mean": 0.42,
-      "gemini_mean": 0.75,
-      "mae": 0.5,
-      "exact_agreement_percent": 58.3,
-      "within_1_percent": 91.7,
-      "pearson_r": 0.563,
-      "weighted_kappa": 0.515
+      "n": 491,
+      "deepseek_mean": 0.04,
+      "gemini_mean": 0.12,
+      "mae": 0.13,
+      "exact_agreement_percent": 89.2,
+      "within_1_percent": 97.6,
+      "pearson_r": 0.219,
+      "weighted_kappa": 0.19
     }
   ]
 }

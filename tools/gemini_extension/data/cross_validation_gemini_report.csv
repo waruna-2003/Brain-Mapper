@@ -1,7 +1,7 @@
 skill,n,deepseek_mean,gemini_mean,mae,exact_agreement_percent,within_1_percent,pearson_r,weighted_kappa
-attention,12,1.75,2.17,0.42,66.7,91.7,0.509,0.417
-working_memory,12,2.08,2.58,0.67,50.0,83.3,0.278,0.191
-logical_reasoning,12,2.08,2.5,0.75,58.3,83.3,0.163,0.125
-language_processing,12,1.58,1.83,0.42,58.3,100.0,0.408,0.318
-critical_thinking,12,1.33,1.83,0.83,33.3,83.3,0.604,0.523
-metacognition,12,0.42,0.75,0.5,58.3,91.7,0.563,0.515
+attention,491,1.61,1.84,0.32,69.9,98.2,0.444,0.406
+working_memory,491,2.23,2.08,0.42,60.5,98.2,0.565,0.553
+logical_reasoning,491,2.29,2.18,0.43,62.1,96.5,0.529,0.517
+language_processing,491,1.46,1.44,0.34,67.0,99.2,0.526,0.526
+critical_thinking,491,0.77,1.12,0.84,37.5,80.0,0.357,0.321
+metacognition,491,0.04,0.12,0.13,89.2,97.6,0.219,0.19

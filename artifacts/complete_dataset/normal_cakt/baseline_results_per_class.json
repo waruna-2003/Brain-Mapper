@@ -1,0 +1,172 @@
+[
+  {
+    "model": "cakt",
+    "split_mode": "per_class",
+    "data_counts": {
+      "annotated_only": true,
+      "annotated_questions": 7652,
+      "active_skills": [
+        "attention",
+        "working_memory",
+        "logical_reasoning",
+        "language_processing",
+        "critical_thinking",
+        "metacognition"
+      ],
+      "use_concepts": true,
+      "use_rasch": false,
+      "attention_window": null,
+      "concept_clusters": null,
+      "cache_students": 18066,
+      "cache_interactions": 5549184,
+      "base_students": 2000,
+      "base_train_windows": 3415,
+      "base_val_windows": 2000
+    },
+    "num_classes": 5,
+    "students_per_class": 40,
+    "summary": {
+      "from_scratch_mean_auc": 0.6115,
+      "from_scratch_mean_acc": 0.7875,
+      "from_scratch_mean_rmse": 0.4051,
+      "base_mean_auc": 0.754,
+      "base_mean_acc": 0.7991,
+      "base_mean_rmse": 0.3805,
+      "customized_mean_auc": 0.7518,
+      "customized_mean_acc": 0.7978,
+      "customized_mean_rmse": 0.3804
+    },
+    "classes": [
+      {
+        "class_id": 1,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.6215977939519284,
+          "accuracy": 0.8025785656728445,
+          "rmse": 0.39394114459015334,
+          "count": 2482,
+          "loss": 0.4915647521843169
+        },
+        "base_uncustomized_test": {
+          "auc": 0.7704677960017418,
+          "accuracy": 0.8098307816277196,
+          "rmse": 0.3679607146218947,
+          "count": 2482,
+          "loss": 0.4309632009455122
+        },
+        "class_customized_test": {
+          "auc": 0.7704677960017418,
+          "accuracy": 0.8098307816277196,
+          "rmse": 0.3679607146218947,
+          "count": 2482,
+          "loss": 0.4309632009455122
+        },
+        "checkpoint": "artifacts\\complete_dataset\\normal_cakt\\cakt_class_1.pt"
+      },
+      {
+        "class_id": 2,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.6390610787813585,
+          "accuracy": 0.7725197177251972,
+          "rmse": 0.4098806226291773,
+          "count": 2409,
+          "loss": 0.5173620214943274
+        },
+        "base_uncustomized_test": {
+          "auc": 0.7742960535967529,
+          "accuracy": 0.8015774180157742,
+          "rmse": 0.38010121145386655,
+          "count": 2409,
+          "loss": 0.45736555314103616
+        },
+        "class_customized_test": {
+          "auc": 0.7742960535967529,
+          "accuracy": 0.8015774180157742,
+          "rmse": 0.38010121145386655,
+          "count": 2409,
+          "loss": 0.45736555314103616
+        },
+        "checkpoint": "artifacts\\complete_dataset\\normal_cakt\\cakt_class_2.pt"
+      },
+      {
+        "class_id": 3,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.5676899324965441,
+          "accuracy": 0.7951706910907577,
+          "rmse": 0.4039241866281883,
+          "count": 2402,
+          "loss": 0.5087958973313649
+        },
+        "base_uncustomized_test": {
+          "auc": 0.6846155235635194,
+          "accuracy": 0.7781015820149875,
+          "rmse": 0.4003350750266588,
+          "count": 2402,
+          "loss": 0.5040314155851773
+        },
+        "class_customized_test": {
+          "auc": 0.676649626993732,
+          "accuracy": 0.7726894254787677,
+          "rmse": 0.3993963898661966,
+          "count": 2402,
+          "loss": 0.4971013682073201
+        },
+        "checkpoint": "artifacts\\complete_dataset\\normal_cakt\\cakt_class_3.pt"
+      },
+      {
+        "class_id": 4,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.5959154738497462,
+          "accuracy": 0.7779131140885099,
+          "rmse": 0.41774811156315067,
+          "count": 2463,
+          "loss": 0.5420871475243346
+        },
+        "base_uncustomized_test": {
+          "auc": 0.7367013094712626,
+          "accuracy": 0.7896873731222087,
+          "rmse": 0.3916291848526294,
+          "count": 2463,
+          "loss": 0.4772005426269017
+        },
+        "class_customized_test": {
+          "auc": 0.7367013094712626,
+          "accuracy": 0.7896873731222087,
+          "rmse": 0.3916291848526294,
+          "count": 2463,
+          "loss": 0.4772005426269017
+        },
+        "checkpoint": "artifacts\\complete_dataset\\normal_cakt\\cakt_class_4.pt"
+      },
+      {
+        "class_id": 5,
+        "students": 40,
+        "from_scratch_test": {
+          "auc": 0.6332224883569106,
+          "accuracy": 0.7894512973202893,
+          "rmse": 0.40020154082232906,
+          "count": 2351,
+          "loss": 0.4996097777712249
+        },
+        "base_uncustomized_test": {
+          "auc": 0.804154830708498,
+          "accuracy": 0.8162484049340706,
+          "rmse": 0.3623351672406173,
+          "count": 2351,
+          "loss": 0.41322739710710443
+        },
+        "class_customized_test": {
+          "auc": 0.8007661622237701,
+          "accuracy": 0.8149723521905572,
+          "rmse": 0.36303865989513395,
+          "count": 2351,
+          "loss": 0.41316268607333895
+        },
+        "checkpoint": "artifacts\\complete_dataset\\normal_cakt\\cakt_class_5.pt"
+      }
+    ]
+  }
+]
