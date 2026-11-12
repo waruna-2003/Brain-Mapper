@@ -1,0 +1,21 @@
+{
+  "name": "brainmapper",
+  "version": "1.0.0",
+  "description": "Cognitive-aware learning analytics and offline LAN classroom exam platform.",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "serve": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.1.0",
+    "express": "^5.2.1",
+    "qrcode": "^1.5.4",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7"
+  }
+}

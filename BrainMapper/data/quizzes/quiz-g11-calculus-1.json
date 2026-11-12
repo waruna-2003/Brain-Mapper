@@ -1,0 +1,43 @@
+{
+  "id": "quiz-g11-calculus-1",
+  "classId": "class-2",
+  "name": "Grade 11 Calculus & Probability: Term 1 Test",
+  "description": "Differentiation basics, sets, and probability problems.",
+  "category": "Mathematics",
+  "difficulty": "Hard",
+  "totalTimeLimit": 3600,
+  "randomization": {
+    "shuffleQuestions": false,
+    "shuffleOptions": false,
+    "useQuestionPool": false,
+    "poolSize": 0
+  },
+  "isTemplate": false,
+  "isArchived": false,
+  "isNew": false,
+  "createdAt": "2026-10-08T09:00:00.000Z",
+  "updatedAt": "2026-10-11T09:00:00.000Z",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "What is the derivative of f(x) = 3x² + 5x - 2?",
+      "options": {
+        "A": "6x + 5",
+        "B": "3x + 5",
+        "C": "6x - 2",
+        "D": "x³ + 5"
+      },
+      "correct": "A",
+      "explanation": "Apply the power rule term by term.",
+      "timeLimit": 0,
+      "cognitiveDemand": {
+        "Attention": 2,
+        "Working Memory": 2,
+        "Logical Reasoning": 3,
+        "Language Processing": 1,
+        "Critical Thinking": 2,
+        "Metacognition": 2
+      }
+    }
+  ]
+}

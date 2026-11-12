@@ -1,0 +1,43 @@
+{
+  "id": "quiz-g10-geometry-2",
+  "classId": "class-1",
+  "name": "Grade 10 Geometry & Trigonometry: Term 2 Test",
+  "description": "Circle theorems, Pythagoras, and trigonometric ratios.",
+  "category": "Mathematics",
+  "difficulty": "Medium",
+  "totalTimeLimit": 2700,
+  "randomization": {
+    "shuffleQuestions": true,
+    "shuffleOptions": false,
+    "useQuestionPool": false,
+    "poolSize": 0
+  },
+  "isTemplate": false,
+  "isArchived": false,
+  "isNew": false,
+  "createdAt": "2026-10-05T09:00:00.000Z",
+  "updatedAt": "2026-10-11T09:00:00.000Z",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "In a right triangle with legs 6 cm and 8 cm, what is the hypotenuse?",
+      "options": {
+        "A": "10 cm",
+        "B": "12 cm",
+        "C": "14 cm",
+        "D": "48 cm"
+      },
+      "correct": "A",
+      "explanation": "√(6² + 8²) = √(36 + 64) = √100 = 10 cm.",
+      "timeLimit": 0,
+      "cognitiveDemand": {
+        "Attention": 2,
+        "Working Memory": 2,
+        "Logical Reasoning": 2,
+        "Language Processing": 1,
+        "Critical Thinking": 2,
+        "Metacognition": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,456 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--text-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.editor-shell {
+  width: 100%;
+  max-width: 980px;
+  background: var(--surface-card);
+  border-radius: var(--radius-main);
+  padding: 40px;
+  box-shadow: var(--shadow-main);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.editor-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--surface-pill-neutral);
+  color: var(--text-700);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background: var(--border-card);
+}
+
+.editor-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-control);
+  background: var(--indigo-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.class-pill {
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--indigo-soft);
+  color: var(--indigo-600);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-banner {
+  padding: 12px 16px;
+  border-radius: var(--radius-control);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-banner--error {
+  background: var(--rose-50);
+  border: 1px solid var(--rose-200);
+  color: var(--rose-700);
+}
+
+.status-banner--success {
+  background: var(--emerald-50);
+  border: 1px solid var(--emerald-200);
+  color: var(--emerald-700);
+}
+
+.status-banner[hidden] {
+  display: none;
+}
+
+.meta-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-700);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-control);
+  background: var(--surface-white);
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--text-900);
+}
+
+.textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--indigo-500);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.inline-pair {
+  display: flex;
+  gap: 8px;
+}
+
+.rand-box {
+  background: var(--indigo-50);
+  border: 1px solid var(--indigo-100);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rand-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--indigo-700);
+}
+
+.check-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-700);
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Question Builder Cards */
+.questions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.q-card {
+  background: var(--surface-white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.q-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-divider);
+}
+
+.q-badge {
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: var(--btn-gradient);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.q-delete-btn {
+  border: 1px solid var(--rose-200);
+  background: var(--rose-50);
+  color: var(--rose-700);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.q-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 12px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.opt-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.opt-letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--indigo-50);
+  color: var(--indigo-600);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ma-check-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius-control);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-card);
+}
+
+.img-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.img-preview[hidden] {
+  display: none;
+}
+
+.img-preview img {
+  max-height: 120px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+}
+
+/* 6-Skill Cognitive Demand Tagging Box */
+.cognitive-box {
+  background: var(--purple-50);
+  border: 1px solid var(--purple-100);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cognitive-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cognitive-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--logo-emblem-purple);
+}
+
+.cognitive-hint {
+  font-size: 11px;
+  color: var(--text-500);
+}
+
+.cognitive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skill-cell {
+  background: var(--surface-white);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-cell-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-700);
+}
+
+.level-pills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.lvl-btn {
+  border: 1px solid var(--border-input);
+  background: var(--surface-subtle);
+  color: var(--text-600);
+  border-radius: 6px;
+  padding: 4px 0;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lvl-btn.is-active {
+  background: var(--indigo-500);
+  border-color: var(--indigo-500);
+  color: #ffffff;
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-card);
+}
+
+.action-btn {
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn--add {
+  background: var(--indigo-soft);
+  color: var(--indigo-600);
+  border-color: var(--indigo-border);
+}
+
+.action-btn--predict {
+  background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%);
+  color: #ffffff;
+  margin-left: auto;
+}
+
+.action-btn--save {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  color: #ffffff;
+}
+
+@media (max-width: 820px) {
+  .field-grid,
+  .q-top-grid,
+  .options-grid,
+  .cognitive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btn--predict {
+    margin-left: 0;
+  }
+}
