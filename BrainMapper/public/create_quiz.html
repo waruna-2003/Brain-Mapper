@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainMapper — Create Quiz</title>
+  <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/create_quiz.css">
+</head>
+<body>
+  <main class="editor-shell">
+    <header class="editor-header">
+      <div class="editor-header-left">
+        <a href="/quiz_library.html?classId=class-1" class="back-btn" id="back-link">
+          <img src="/assets/icons/back-arrow.svg" alt="" width="16" height="16">
+          <span>Back</span>
+        </a>
+        <div class="editor-title-group">
+          <div class="bm-title-stack">
+            <a href="/" class="bm-wordmark">BrainMapper</a>
+            <h1 class="editor-title" id="page-title">Create Quiz</h1>
+          </div>
+        </div>
+      </div>
+      <span class="class-pill" id="class-pill">Class 1</span>
+    </header>
+
+    <div class="status-banner" id="status-banner" hidden></div>
+
+    <section class="meta-card" aria-label="Quiz settings">
+      <div class="field-grid">
+        <label class="field" style="grid-column: span 2;">
+          <span class="field-label">Quiz Title</span>
+          <input type="text" id="quiz-name" class="input" placeholder="e.g., Grade 10 Statistics & Probability: Quiz 4" maxlength="150">
+        </label>
+
+        <label class="field">
+          <span class="field-label">Difficulty</span>
+          <select id="quiz-difficulty" class="select">
+            <option value="Easy">Easy</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span class="field-label">Description</span>
+        <textarea id="quiz-description" class="textarea" placeholder="Topics covered, learning objectives, or exam instructions..."></textarea>
+      </label>
+
+      <div class="field-grid">
+        <label class="field">
+          <span class="field-label">Category</span>
+          <select id="quiz-category" class="select">
+            <option value="Mathematics">Mathematics</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+            <option value="English">English</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <div class="field">
+          <span class="field-label">Overall Time Limit</span>
+          <div class="inline-pair">
+            <input type="number" id="quiz-time-value" class="input" min="0" value="30">
+            <select id="quiz-time-unit" class="select" style="width: 130px;">
+              <option value="seconds">Seconds</option>
+              <option value="minutes" selected>Minutes</option>
+              <option value="hours">Hours</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="field" style="justify-content: flex-end;">
+          <span class="check-label" style="height: 40px;">
+            <input type="checkbox" id="is-template">
+            <span>Save as reusable Template</span>
+          </span>
+        </label>
+      </div>
+    </section>
+
+    <section class="questions-stack" id="questions-container" aria-label="Questions"></section>
+
+    <div class="editor-actions">
+      <button type="button" class="action-btn action-btn--add" id="add-question-btn">
+        <img src="/assets/icons/lib-plus-indigo.svg" alt="" width="16" height="16">
+        <span>Add Question</span>
+      </button>
+
+      <button type="button" class="action-btn action-btn--predict" id="save-predict-btn">
+        <img src="/assets/icons/predict-bars.svg" alt="" width="16" height="16">
+        <span>Save &amp; Predict Scores</span>
+      </button>
+
+      <button type="button" class="action-btn action-btn--save" id="save-quiz-btn">
+        <span>Save Quiz</span>
+      </button>
+    </div>
+  </main>
+
+  <script src="/js/create_quiz.js"></script>
+</body>
+</html>

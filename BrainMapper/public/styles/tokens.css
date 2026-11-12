@@ -1,0 +1,109 @@
+@import url('/vendor/inter/400.css');
+@import url('/vendor/inter/500.css');
+@import url('/vendor/inter/600.css');
+@import url('/vendor/inter/700.css');
+@import url('/vendor/inter/800.css');
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Brand & Surfaces */
+  --bg-gradient: linear-gradient(135deg, #6c5cb8 0%, #b876e0 100%);
+  --brand-gradient: linear-gradient(90deg, #6366f1 0%, #b04fd0 100%);
+  --btn-gradient: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+  --surface-card: #fefeff;
+  --surface-white: #ffffff;
+  --surface-subtle: #fafafc;
+  --surface-muted: #f8fafc;
+  --surface-pill-neutral: #f1f5f9;
+
+  /* Logo Emblem */
+  --logo-tile-bg: #e1b0f2;
+  --logo-emblem-purple: #6a0f8e;
+  --logo-tile-shadow: 0 8px 12px rgba(176, 79, 208, 0.35);
+
+  /* Accent Colors */
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-soft: #eef0ff;
+  --indigo-border: #c4b5fd;
+
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-50: #eff6ff;
+
+  --violet-500: #8b5cf6;
+  --purple-50: #faf5ff;
+  --purple-100: #f3e8ff;
+  --purple-700: #7e22ce;
+
+  /* Semantic Status Colors */
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-700: #b45309;
+
+  --rose-50: #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-200: #fecdd3;
+  --rose-700: #be123c;
+
+  --sky-100: #e0f2fe;
+  --sky-700: #0369a1;
+
+  /* Text & Borders */
+  --text-900: #1e293b;
+  --text-700: #334155;
+  --text-600: #475569;
+  --text-500: #64748b;
+  --text-muted: #6b7280;
+  --text-400: #94a3b8;
+
+  --border-card: #e5e7eb;
+  --border-input: #e2e8f0;
+  --border-dashed: #d1d5db;
+  --border-divider: #f1f5f9;
+
+  /* Elevation & Radii */
+  --shadow-main: 0 25px 30px rgba(76, 29, 149, 0.35);
+  --shadow-modal: 0 25px 50px -12px rgba(76, 29, 149, 0.25);
+  --shadow-card-hover: 0 12px 24px -8px rgba(76, 29, 149, 0.18);
+  --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.05);
+
+  --radius-main: 28px;
+  --radius-modal: 24px;
+  --radius-card: 20px;
+  --radius-control: 12px;
+  --radius-pill: 9999px;
+}
+
+.bm-title-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bm-wordmark {
+  display: inline-block;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 16px;
+  letter-spacing: -0.25px;
+  text-decoration: none;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

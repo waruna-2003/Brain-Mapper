@@ -1,0 +1,64 @@
+{
+  "id": "quiz-g10-algebra-1",
+  "classId": "class-1",
+  "name": "Grade 10 Algebra: Term 1 Test",
+  "description": "Algebraic expressions, factorization, and linear equations.",
+  "category": "Mathematics",
+  "difficulty": "Easy",
+  "totalTimeLimit": 1800,
+  "randomization": {
+    "shuffleQuestions": false,
+    "shuffleOptions": false,
+    "useQuestionPool": false,
+    "poolSize": 0
+  },
+  "isTemplate": false,
+  "isArchived": false,
+  "isNew": false,
+  "createdAt": "2026-10-02T09:00:00.000Z",
+  "updatedAt": "2026-10-14T09:00:00.000Z",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "Factorize completely: x² - 9",
+      "options": {
+        "A": "(x - 3)(x + 3)",
+        "B": "(x - 9)(x + 1)",
+        "C": "(x - 3)²",
+        "D": "x(x - 9)"
+      },
+      "correct": "A",
+      "explanation": "Difference of two squares: a² - b² = (a - b)(a + b).",
+      "timeLimit": 0,
+      "cognitiveDemand": {
+        "Attention": 1,
+        "Working Memory": 1,
+        "Logical Reasoning": 2,
+        "Language Processing": 1,
+        "Critical Thinking": 1,
+        "Metacognition": 1
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Solve for x: 3x - 7 = 14",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "9",
+        "D": "21"
+      },
+      "correct": "B",
+      "explanation": "Add 7 to both sides (3x = 21), then divide by 3 (x = 7).",
+      "timeLimit": 0,
+      "cognitiveDemand": {
+        "Attention": 1,
+        "Working Memory": 2,
+        "Logical Reasoning": 2,
+        "Language Processing": 1,
+        "Critical Thinking": 1,
+        "Metacognition": 1
+      }
+    }
+  ]
+}
