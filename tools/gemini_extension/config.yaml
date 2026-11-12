@@ -1,0 +1,41 @@
+# Configuration for Gemini Web Cross-Validation Extension Bridge Server
+
+server:
+  host: "127.0.0.1"
+  port: 8767
+  cors_allowed_origins:
+    - "https://gemini.google.com"
+    - "http://127.0.0.1:8767"
+    - "http://localhost:8767"
+
+dataset:
+  questions_csv: "../../data/processed/xes3g5m/questions.csv"
+  # Target 500 questions for cross-validation against DeepSeek
+  target_count: 500
+  # STRICT REQUIREMENT: Only select text-based questions (exclude any diagrams/images)
+  text_only: true
+  reference_deepseek_file: "../deepseek_extension/data/deepseek_annotations.jsonl"
+
+storage:
+  output_dir: "data"
+  annotations_file: "data/gemini_annotations.jsonl"
+  failures_file: "data/gemini_failures.jsonl"
+  state_file: "data/state.json"
+
+pacing:
+  default_delay_seconds: 5.0
+  min_delay_seconds: 2.5
+  max_delay_seconds: 20.0
+
+validation:
+  required_skills:
+    - attention
+    - working_memory
+    - logical_reasoning
+    - language_processing
+    - critical_thinking
+    - metacognition
+  min_score: 0
+  max_score: 3
+  min_confidence: 0.0
+  max_confidence: 1.0

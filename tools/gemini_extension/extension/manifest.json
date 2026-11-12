@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Brain Mapper - Gemini Web Annotator (Text-Based)",
+  "version": "1.0.0",
+  "description": "Automated bridge for annotating 500 text-based questions on Gemini Web (gemini.google.com).",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "http://127.0.0.1:8767/*",
+    "http://localhost:8767/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Brain Mapper Gemini Annotator"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "content/gemini_dom.js",
+        "content/parser.js",
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

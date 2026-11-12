@@ -1,0 +1,7 @@
+skill,n,deepseek_mean,gemini_mean,mae,exact_agreement_percent,within_1_percent,pearson_r,weighted_kappa
+attention,12,1.75,2.17,0.42,66.7,91.7,0.509,0.417
+working_memory,12,2.08,2.58,0.67,50.0,83.3,0.278,0.191
+logical_reasoning,12,2.08,2.5,0.75,58.3,83.3,0.163,0.125
+language_processing,12,1.58,1.83,0.42,58.3,100.0,0.408,0.318
+critical_thinking,12,1.33,1.83,0.83,33.3,83.3,0.604,0.523
+metacognition,12,0.42,0.75,0.5,58.3,91.7,0.563,0.515

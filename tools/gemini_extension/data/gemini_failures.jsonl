@@ -1,0 +1,2 @@
+{"question_id": 1, "error": "Timeout: No stable assistant response received from Gemini after 120s", "attempt": 1, "failed_at": "2026-11-10T06:52:46.348969+00:00"}
+{"question_id": 7, "error": "Timeout: No stable assistant response received from Gemini after 120s", "attempt": 1, "failed_at": "2026-11-10T06:57:35.314409+00:00"}
