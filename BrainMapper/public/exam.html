@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainMapper — Student Exam Portal</title>
+  <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/exam.css">
+</head>
+<body class="font-medium">
+  <main class="exam-shell">
+    <header class="exam-topbar">
+      <div class="brand-row">
+        <div>
+          <h1 class="brand-title">BrainMapper</h1>
+          <p class="brand-sub" id="student-identity-sub">Offline Classroom Exam Portal</p>
+        </div>
+      </div>
+
+      <div class="utility-tools">
+        <button type="button" class="icon-btn" id="nav-toggle-btn" hidden>
+          <img src="/assets/icons/list-nav.svg" alt="" width="15" height="15">
+          <span>Questions</span>
+        </button>
+        <button type="button" class="icon-btn" id="settings-toggle-btn" aria-label="Accessibility settings">
+          <img src="/assets/icons/sliders.svg" alt="" width="15" height="15">
+          <span>Display</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Accessibility Settings Popover -->
+    <div class="settings-popover" id="settings-popover" hidden>
+      <div class="setting-row">
+        <span>Dark Mode</span>
+        <input type="checkbox" id="dark-mode-toggle" style="width: 18px; height: 18px;">
+      </div>
+
+      <div>
+        <div class="setting-row" style="margin-bottom: 6px;">
+          <span>Text Size</span>
+        </div>
+        <div class="font-pill-group">
+          <button type="button" class="font-pill" data-font="small">S</button>
+          <button type="button" class="font-pill is-active" data-font="medium">M</button>
+          <button type="button" class="font-pill" data-font="large">L</button>
+          <button type="button" class="font-pill" data-font="xlarge">XL</button>
+        </div>
+      </div>
+
+      <button type="button" class="secondary-btn" id="tts-toggle-btn">
+        Enable Read Aloud
+      </button>
+      <button type="button" class="secondary-btn" id="manual-save-draft-btn" hidden>
+        Save Draft Now
+      </button>
+    </div>
+
+    <div class="toast toast--info" id="toast-banner" hidden role="status"></div>
+
+    <!-- Step 1: Join Form -->
+    <section id="view-join" class="form-stack">
+      <div class="status-card" id="join-session-card">
+        <strong id="join-session-headline" style="font-size: 15px;">Checking classroom session...</strong>
+        <span id="join-session-detail" style="font-size: 13px; color: var(--text-500);">
+          Connected over offline LAN. No internet required.
+        </span>
+      </div>
+
+      <form id="join-form" class="form-stack" novalidate>
+        <label class="field">
+          <span class="field-label">Your Student ID *</span>
+          <input type="text" id="join-code" class="input" maxlength="24" placeholder="Enter your assigned ID (e.g., ST-1001 or #ST-1001)" required>
+          <span style="font-size: 12px; color: var(--text-500);">
+            Enter the unique Student ID assigned by your teacher. Your profile loads automatically.
+          </span>
+        </label>
+
+        <label class="field" id="pin-field-wrap" hidden>
+          <span class="field-label">Session PIN *</span>
+          <input type="text" id="join-pin" class="input" maxlength="12" placeholder="Enter PIN displayed by teacher">
+        </label>
+
+        <button type="submit" class="primary-btn" id="join-submit-btn">
+          Join Classroom Session
+        </button>
+      </form>
+    </section>
+
+    <!-- Step 2: Waiting Lobby -->
+    <section id="view-lobby" class="lobby-box" hidden>
+      <div class="pulse-ring" aria-hidden="true">
+        <img src="/assets/icons/wifi-lan.svg" alt="" width="24" height="24">
+      </div>
+      <h2 style="font-size: 22px; font-weight: 800;" id="lobby-welcome">Connected to Waiting Room</h2>
+      <p style="font-size: 14px; color: var(--text-500); max-width: 460px; line-height: 22px;" id="lobby-subtitle">
+        Waiting for your teacher to start the live quiz. Your screen will open automatically.
+      </p>
+      <button type="button" class="secondary-btn danger-outline-btn" id="leave-lobby-btn">
+        Leave Waiting Room
+      </button>
+    </section>
+
+    <!-- Step 3: Active Quiz -->
+    <section id="view-exam" class="form-stack" hidden>
+      <div class="exam-hud">
+        <div class="hud-row">
+          <h2 class="hud-quiz-name" id="exam-quiz-title">Quiz Title</h2>
+          <div class="timer-pill" id="overall-timer-pill" hidden>
+            <img src="/assets/icons/clock.svg" alt="" width="14" height="14">
+            <span id="overall-timer-text">00:00</span>
+          </div>
+        </div>
+
+        <div class="progress-meta">
+          <span id="progress-label">0 of 0 answered</span>
+          <span id="focus-label">Active Question 1</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="nav-drawer" id="nav-drawer" hidden>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: var(--text-500);">
+          <span>Question Navigator</span>
+          <span>Indigo = Current • Green = Answered • Amber = Flagged</span>
+        </div>
+        <div class="nav-chips" id="nav-chips"></div>
+      </div>
+
+      <div class="question-list" id="question-list"></div>
+
+      <div class="exam-footer">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button type="button" class="secondary-btn" id="prev-q-btn">Previous</button>
+          <button type="button" class="secondary-btn" id="next-q-btn">Next</button>
+        </div>
+        <button type="button" class="primary-btn emerald-btn" id="submit-exam-btn">
+          Submit Exam
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 4: Submitted Result -->
+    <section id="view-result" class="result-card" hidden>
+      <img src="/assets/icons/check-circle.svg" alt="" width="40" height="40">
+      <h2 style="font-size: 24px; font-weight: 800;" id="result-headline">Exam Submitted!</h2>
+      <div class="result-score-big" id="result-score">0 / 0</div>
+      <div style="font-size: 18px; font-weight: 700; color: var(--emerald-700);" id="result-percent">0%</div>
+      <p style="font-size: 14px; color: var(--text-600); max-width: 440px;" id="result-note">
+        Your answers have been recorded for this classroom session.
+      </p>
+      <button type="button" class="secondary-btn" id="result-check-new-btn">
+        Check for New Session
+      </button>
+    </section>
+  </main>
+
+  <!-- Submit Confirmation Modal -->
+  <div class="modal-backdrop" id="confirm-submit-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="submit-modal-title">
+      <h3 id="submit-modal-title" style="font-size: 18px; font-weight: 800;">Submit Your Answers?</h3>
+      <p id="submit-modal-message" style="font-size: 14px; color: var(--text-600); line-height: 21px;"></p>
+      <div class="modal-actions">
+        <button type="button" class="secondary-btn" id="cancel-submit-btn">Review Answers</button>
+        <button type="button" class="primary-btn emerald-btn" id="confirm-submit-yes-btn" style="height: 42px;">Confirm Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainMapper — Live Session Monitor</title>
+  <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/session_monitor.css">
+</head>
+<body>
+  <main class="monitor-shell">
+    <header class="mon-header">
+      <div class="mon-header-left">
+        <a href="/class_dashboard.html?classId=class-1" class="back-btn" id="back-link">
+          <img src="/assets/icons/back-arrow.svg" alt="" width="16" height="16">
+          <span>Back</span>
+        </a>
+        <div class="mon-title-group">
+          <div class="bm-title-stack">
+            <a href="/" class="bm-wordmark">BrainMapper</a>
+            <h1 class="mon-title">Live Session Monitor</h1>
+          </div>
+          <span class="class-pill" id="class-pill">Class 1</span>
+        </div>
+      </div>
+
+      <div class="mon-header-right">
+        <span class="status-badge status-badge--idle" id="session-status-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="session-status-text">Ready</span>
+        </span>
+        <a href="/quiz_library.html?classId=class-1" class="btn btn--outline btn--sm" id="library-link">
+          Quiz Library
+        </a>
+      </div>
+    </header>
+
+    <div class="notice-banner notice-banner--info" id="notice-banner" hidden role="status">
+      <span id="notice-text"></span>
+      <button type="button" class="btn btn--ghost btn--sm" id="notice-close">Dismiss</button>
+    </div>
+
+    <section class="session-complete-card" id="session-ended-banner" hidden>
+      <div>
+        <div style="font-size: 16px; font-weight: 800; color: var(--emerald-700);">
+          Quiz Session Completed &amp; Saved
+        </div>
+        <div style="font-size: 13px; color: var(--text-600); margin-top: 2px;" id="ended-summary-text">
+          Student responses have been saved for cognitive &amp; grade analysis.
+        </div>
+      </div>
+      <div class="action-row">
+        <a href="/analyze.html?classId=class-1" class="btn btn--primary btn--sm" id="view-grades-link">
+          <img src="/assets/icons/dash-analyze.svg" alt="" width="14" height="14">
+          <span>View Grades &amp; Analytics</span>
+        </a>
+        <button type="button" class="btn btn--outline btn--sm" id="ended-new-session-btn">
+          Start Another Session
+        </button>
+      </div>
+    </section>
+
+    <section class="kpi-grid" aria-label="Live session metrics">
+      <article class="kpi-card">
+        <span class="kpi-label">Joined Students</span>
+        <span class="kpi-val kpi-val--indigo" id="kpi-joined">0</span>
+        <span class="kpi-sub" id="kpi-waiting-sub">0 in waiting lobby</span>
+      </article>
+      <article class="kpi-card">
+        <span class="kpi-label">In Progress</span>
+        <span class="kpi-val" id="kpi-progress">0</span>
+        <span class="kpi-sub">Active on LAN exam</span>
+      </article>
+      <article class="kpi-card">
+        <span class="kpi-label">Submitted</span>
+        <span class="kpi-val kpi-val--emerald" id="kpi-submitted">0</span>
+        <span class="kpi-sub" id="kpi-completion-sub">0% completed</span>
+      </article>
+      <article class="kpi-card">
+        <span class="kpi-label">Live Average</span>
+        <span class="kpi-val" id="kpi-average">--%</span>
+        <span class="kpi-sub">Auto-graded items</span>
+      </article>
+    </section>
+
+    <section class="workspace-grid">
+      <!-- Left: Session Config & Controls -->
+      <article class="panel-card">
+        <div class="panel-head">
+          <div>
+            <h2 class="panel-title">Session Setup &amp; Controls</h2>
+            <p class="panel-sub">Select a quiz, configure LAN access, and control exam state.</p>
+          </div>
+          <a href="/predicted_results.html?classId=class-1" class="btn btn--ghost btn--sm" id="predict-link">
+            Predict Scores
+          </a>
+        </div>
+
+        <div class="field-stack">
+          <label class="field">
+            <span class="field-label">Quiz to Conduct</span>
+            <select id="quiz-select" class="select"></select>
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span class="field-label">LAN IP Adapter</span>
+              <select id="ip-select" class="select"></select>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Session PIN (Optional)</span>
+              <input type="text" id="pin-input" class="input" maxlength="12" placeholder="e.g., 4821">
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-meta-box" id="quiz-meta-box">
+          <div class="meta-row">
+            <strong id="meta-quiz-title" style="font-size: 14px; color: var(--text-900);">Select a quiz</strong>
+            <span class="meta-chip meta-chip--indigo" id="meta-difficulty">Medium</span>
+          </div>
+          <div class="meta-chips">
+            <span class="meta-chip">
+              <img src="/assets/icons/card-questions.svg" alt="" width="13" height="13">
+              <span id="meta-questions">0 Questions</span>
+            </span>
+            <span class="meta-chip">
+              <img src="/assets/icons/card-clock.svg" alt="" width="13" height="13">
+              <span id="meta-duration">Untimed</span>
+            </span>
+            <span class="meta-chip" id="meta-random-chip" hidden>Randomized</span>
+          </div>
+        </div>
+
+        <div class="action-row" id="control-buttons">
+          <button type="button" class="btn btn--primary" id="open-lobby-btn">
+            <img src="/assets/icons/wifi-lan.svg" alt="" width="16" height="16" style="filter: brightness(10);">
+            <span>Open Student Lobby</span>
+          </button>
+          <button type="button" class="btn btn--emerald" id="start-quiz-btn">
+            <img src="/assets/icons/dash-play.svg" alt="" width="11" height="13">
+            <span>Start Live Quiz</span>
+          </button>
+          <button type="button" class="btn btn--danger" id="end-quiz-btn" hidden>
+            <span>End Session</span>
+          </button>
+          <button type="button" class="btn btn--ghost" id="reset-lobby-btn" hidden>
+            <span>Reset Lobby</span>
+          </button>
+        </div>
+
+        <div id="confirm-end-box" class="quiz-meta-box" style="background: var(--rose-50); border-color: var(--rose-200);" hidden>
+          <div style="font-size: 13px; font-weight: 700; color: var(--rose-700);">
+            End this live quiz session? Active students will be stopped and current submissions will be finalized.
+          </div>
+          <div class="action-row">
+            <button type="button" class="btn btn--danger btn--sm" id="confirm-end-yes">Yes, End Quiz Session</button>
+            <button type="button" class="btn btn--outline btn--sm" id="confirm-end-cancel">Cancel</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right: LAN QR Code & Student URL -->
+      <article class="panel-card qr-panel">
+        <div class="panel-head" style="width: 100%; justify-content: center;">
+          <div>
+            <h2 class="panel-title" style="justify-content: center;">Students Connect Here</h2>
+            <p class="panel-sub">Scan on classroom Wi-Fi/LAN or open the URL and enter Student ID</p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="qr-frame"
+          id="qr-expand-btn"
+          title="Click QR code to maximize on screen"
+          aria-label="Maximize student join QR code"
+        >
+          <img id="qr-image" alt="Student LAN exam join QR code" width="196" height="196">
+          <span class="qr-zoom-badge">Click to maximize</span>
+        </button>
+
+        <div class="url-copy-bar">
+          <span class="url-text" id="join-url-text">http://127.0.0.1:3000/exam</span>
+          <button type="button" class="btn btn--outline btn--sm" id="copy-url-btn">
+            <img src="/assets/icons/copy.svg" alt="" width="14" height="14">
+            <span id="copy-url-label">Copy</span>
+          </button>
+        </div>
+
+        <div class="action-row" style="justify-content: center;">
+          <span class="pin-display" id="active-pin-pill" hidden>PIN: 0000</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Connected Participants -->
+    <section class="panel-card" aria-labelledby="participants-heading">
+      <div class="panel-head">
+        <div>
+          <h2 class="panel-title" id="participants-heading">
+            <img src="/assets/icons/pred-users.svg" alt="" width="18" height="14">
+            <span>Connected Participants (<span id="participant-count">0</span>)</span>
+          </h2>
+          <p class="panel-sub">Real-time student join status, question progress, and auto-graded scores.</p>
+        </div>
+
+        <div class="filter-pills" role="tablist" aria-label="Filter participants">
+          <button type="button" class="filter-pill is-active" data-filter="all">All</button>
+          <button type="button" class="filter-pill" data-filter="waiting">Waiting</button>
+          <button type="button" class="filter-pill" data-filter="in-progress">In Progress</button>
+          <button type="button" class="filter-pill" data-filter="submitted">Submitted</button>
+        </div>
+      </div>
+
+      <div id="participants-container"></div>
+    </section>
+  </main>
+
+  <!-- Fullscreen QR Code Lightbox -->
+  <div class="qr-lightbox" id="qr-lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="qr-lightbox-title">
+    <div class="qr-lightbox-card">
+      <div class="qr-lightbox-head">
+        <div class="bm-title-stack">
+          <span class="bm-wordmark">BrainMapper</span>
+          <h2 id="qr-lightbox-title" style="font-size: 24px; font-weight: 800; color: var(--text-900);">
+            Scan QR Code to Join Exam
+          </h2>
+          <p id="qr-lightbox-sub" style="font-size: 13px; color: var(--text-500);">
+            Connect to classroom Wi-Fi/LAN, scan, and enter your assigned Student ID
+          </p>
+        </div>
+        <button type="button" class="qr-close-btn" id="qr-lightbox-close" aria-label="Close fullscreen QR code">
+          <img src="/assets/icons/close.svg" alt="" width="22" height="22">
+        </button>
+      </div>
+
+      <div class="qr-lightbox-stage">
+        <img id="qr-lightbox-img" alt="Maximized student join QR code" class="qr-lightbox-img">
+      </div>
+
+      <div class="qr-lightbox-foot">
+        <div class="qr-lightbox-url" id="qr-lightbox-url">http://127.0.0.1:3000/exam</div>
+        <div class="action-row" style="justify-content: center;">
+          <span class="pin-display" id="qr-lightbox-pin" hidden>Session PIN: 0000</span>
+          <span class="class-pill" id="qr-lightbox-joined">0 Students Joined</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/session_monitor.js"></script>
+</body>
+</html>
